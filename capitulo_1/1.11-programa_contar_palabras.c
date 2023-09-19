@@ -18,7 +18,7 @@ int main() {
         ++ caracteres;
         if (entrada == '\n')
             ++ lineas;
-        if (entrada == ' ' | entrada == '\n' | entrada == '\t')
+        if (entrada == ' ' || entrada == '\n' || entrada == '\t')
             estado = OUT;
         else if (estado == OUT){
             estado = IN;

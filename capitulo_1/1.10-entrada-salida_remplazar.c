@@ -1,4 +1,4 @@
-/* Programa que copia la entrada a la salida, pero cada tabulación \t, retroceso \b y cada diagonal invertida \ por \\ */
+/* Programa que copia la entrada a la salida, pero cada tabulación \t, espacio y cada diagonal invertida \ por \\ */
 #include<stdio.h>
 
  int main(){
@@ -6,12 +6,11 @@
 
 	while((entrada = getchar()) != EOF) {
 		if (entrada == '\t')
-			putchar('\\');
-		else if (entrada == '\b')
-			putchar('\\');
+			printf("\\\\");
+		else if (entrada == ' ')
+			printf("\\\\");
 		else if (entrada == '\\') {
-			putchar('\\');			//por que aqui tengo que ponerlo 2 veces y arriba no??
-			putchar('\\');
+			printf("\\\\");
 		}
 		else 
 			putchar(entrada);
